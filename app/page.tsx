@@ -1,11 +1,14 @@
-import Link from 'next/link';
+'use client'
 
+import React , { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 export default function Home() {
+
+  const router = useRouter();
+  useEffect(() => {
+    router.push('/about');
+  } , []);
   return (
-    <div>
-      <Link href='/'>Home</Link>
-      <Link href='about'>About</Link>
-      <Link href='blog'>Blog</Link>
-    </div>
+    <></>
   )
 };
